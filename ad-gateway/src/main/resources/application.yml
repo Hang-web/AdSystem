@@ -9,13 +9,9 @@ eureka:
       defaultZone: http://server1:8000/eureka/
 
 zuul:
-  prefix: /imooc
+  prefix: /imooc #所有经过网关的请求，都有一个前缀，为/imooc
   routes:
     sponsor:
       path: /ad-sponsor/**
       serviceId: eureka-client-ad-sponsor
-      strip-prefix: false
-    search:
-      path: /ad-search/**
-      serviceId: eureka-client-ad-search
-      strip-prefix: false
+      strip-prefix: false #如果设置为true，则会把 serviceId的前路径给过滤掉

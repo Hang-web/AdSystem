@@ -14,7 +14,7 @@ spring:
       hibernate.format_sql: true
     open-in-view: false
   datasource:
-    url: jdbc:mysql://rm-8vbts7tttk219gol5wo.mysql.zhangbei.rds.aliyuncs.com/imooc_ad_data?autoReconnect=true
+    url: jdbc:mysql://rm-8vbts7tttk219gol5wo.mysql.zhangbei.rds.aliyuncs.com:3306/imooc_ad_data?autoReconnect=true
     username: tzc
     password: 0wgWG^FS)VF5G3yg
     tomcat:
