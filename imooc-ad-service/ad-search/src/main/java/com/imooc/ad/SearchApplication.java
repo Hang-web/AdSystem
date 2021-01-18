@@ -12,15 +12,12 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
-/**
- * Created by Qinyi.
- */
-@EnableFeignClients
+@EnableFeignClients //使用Feign去访问微服务
 @EnableEurekaClient
-@EnableHystrix
+@EnableHystrix //使用断路器
 @EnableCircuitBreaker
-@EnableDiscoveryClient
-@EnableHystrixDashboard
+@EnableDiscoveryClient //启动微服务的发现能力
+@EnableHystrixDashboard //断路器的监控
 @SpringBootApplication
 public class SearchApplication {
 
@@ -30,7 +27,7 @@ public class SearchApplication {
     }
 
     @Bean
-    @LoadBalanced
+    @LoadBalanced //开启负载均衡的能力
     RestTemplate restTemplate() {
 
         return new RestTemplate();
