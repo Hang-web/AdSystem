@@ -27,7 +27,7 @@ public class SearchApplication {
     }
 
     @Bean
-    @LoadBalanced //开启负载均衡的能力
+    @LoadBalanced //开启负载均衡的能力，在使用SpringCloud Ribbon客户端时，在restTemplate bean上加此注解
     RestTemplate restTemplate() {
 
         return new RestTemplate();
