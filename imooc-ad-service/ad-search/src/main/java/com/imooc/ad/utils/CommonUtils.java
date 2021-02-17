@@ -11,12 +11,10 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.function.Supplier;
 
-/**
- * Created by Qinyi.
- */
 @Slf4j
 public class CommonUtils {
 
+    //传递进来一个map，如果这个map的key不存在的情况下，使用Supplier<V> factory返回一个新的对象
     public static <K, V> V getorCreate(K key, Map<K, V> map,
                                        Supplier<V> factory) {
         return map.computeIfAbsent(key, k -> factory.get());

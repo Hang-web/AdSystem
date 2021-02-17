@@ -1,13 +1,10 @@
 package com.imooc.ad.dump;
 
-/**
- * Created by Qinyi.
- */
+//此类是将导出的表数据字段定义 放在指定目录
 public class DConstant {
+    public static final String DATA_ROOT_DIR = "/User/imooc/mysql_data";
 
-    public static final String DATA_ROOT_DIR = "/Users/zhanghu05/imooc/mysql_data/";
-
-    // 各个表数据的存储文件名
+    //定义各个数据表的存储文件名称
     public static final String AD_PLAN = "ad_plan.data";
     public static final String AD_UNIT = "ad_unit.data";
     public static final String AD_CREATIVE = "ad_creative.data";
