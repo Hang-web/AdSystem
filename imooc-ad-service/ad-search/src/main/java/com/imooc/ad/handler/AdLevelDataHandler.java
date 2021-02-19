@@ -99,12 +99,8 @@ public class AdLevelDataHandler {
             return;
         }
 
-        AdUnitObject unitObject = DataTable.of(
-                AdUnitIndex.class
-        ).get(creativeUnitTable.getUnitId());
-        CreativeObject creativeObject = DataTable.of(
-                CreativeIndex.class
-        ).get(creativeUnitTable.getAdId());
+        AdUnitObject unitObject = DataTable.of(AdUnitIndex.class).get(creativeUnitTable.getUnitId());
+        CreativeObject creativeObject = DataTable.of(CreativeIndex.class).get(creativeUnitTable.getAdId());
 
         if (null == unitObject || null == creativeObject) {
             log.error("AdCreativeUnitTable index error: {}",
